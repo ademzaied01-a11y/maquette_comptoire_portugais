@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F3EB; color: #1B2836; font-family: 'Hanken Grotesk', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #1E4E86; }
+  a:hover { color: #A9812E; }
+  a { transition: color .22s ease, background-color .22s ease, border-color .22s ease, transform .22s ease, box-shadow .22s ease; }
+  @keyframes kenburns { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
+  a.hl-gold:hover { color: #A9812E !important; border-bottom-color: #A9812E !important; }
+  a.fl-gold:hover { color: #E8C97A !important; }
+  a.btn-blue:hover { background: #122F55 !important; transform: translateY(-2px); box-shadow: 0 12px 26px rgba(18,47,85,.28); }
+  a.btn-dark:hover { background: #1B2836 !important; color: #F7F3EB !important; transform: translateY(-2px); box-shadow: 0 12px 26px rgba(27,40,54,.24); }
+  a.btn-gold:hover { background: #E8C97A !important; color: #14283E !important; transform: translateY(-2px); box-shadow: 0 12px 26px rgba(20,40,62,.30); }
+  a.btn-cream:hover { background: #F7F3EB !important; color: #1E4E86 !important; transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,.25); }
+  .zw:hover img { transform: scale(1.05); }
+  @media (max-width: 900px) {
+    div[style*="column-count"] { column-count: 2 !important; }
+  }
+  @media (max-width: 720px) {
+    nav { position: static !important; justify-content: center !important; flex-wrap: wrap !important; gap: 0 20px !important; padding: 4px 14px !important; }
+    nav a { white-space: nowrap; padding: 9px 2px 7px !important; font-size: 11.5px !important; letter-spacing: .12em !important; }
+  }
+  @media (max-width: 640px) {
+    body { overflow-x: hidden; }
+    div[style*="white-space: nowrap"], div[style*="white-space:nowrap"] { white-space: normal !important; }
+    h2[style*="white-space: nowrap"], h2[style*="white-space:nowrap"] { white-space: normal !important; }
+    div[style*="height: 1px"], div[style*="height:1px"] { display: none; }
+    div[style*="align-items: baseline"][style*="gap: 20px"] { flex-wrap: wrap; row-gap: 6px !important; }
+    div[style*="min-height: 440px"] { min-height: 360px !important; }
+    div[style*="min-height: 420px"] { min-height: 320px !important; }
+    div[style*="minmax(3"] { grid-template-columns: 1fr !important; }
+    div[style*="column-count"] { column-count: 1 !important; }
+    div[style*="min-height:520px"], div[style*="min-height: 520px"] { min-height: 340px !important; }
+  }
+  @media (max-width: 480px) {
+    a.btn-blue, a.btn-dark, a.btn-gold, a.btn-cream { flex: 1 1 100%; text-align: center; }
+  }
+  ::selection { background: #1E4E86; color: #F7F3EB; }
+</style>
+<script src="anim.js"></script>
+</helmet>
+
+<section data-screen-label="Fado &amp; Événements" style="background:#F7F3EB;">
+
+  <div style="height:9px; background-image:linear-gradient(45deg,#1E4E86 25%,transparent 25%,transparent 75%,#1E4E86 75%),linear-gradient(45deg,#1E4E86 25%,transparent 25%,transparent 75%,#1E4E86 75%); background-position:0 0,7px 7px; background-size:14px 14px;"></div>
+
+  <div style="text-align:center; padding:36px 24px 22px;">
+    <div style="font-size:11px; letter-spacing:.34em; text-transform:uppercase; color:#A9812E; font-weight:700;">Restaurant portugais — Ballainvilliers</div>
+    <a href="Accueil.dc.html" style="text-decoration:none; color:#1B2836;" class="hl-gold"><div style="font-family:'Cormorant Garamond',serif; font-size:clamp(30px,4vw,44px); font-weight:600; letter-spacing:.07em; margin-top:10px; text-transform:uppercase;">Comptoir du Portugal</div></a>
+  </div>
+
+  <nav style="position:sticky; top:0; z-index:50; background:rgba(247,243,235,.96); backdrop-filter:blur(8px); border-top:1px solid #E3DAC7; border-bottom:1px solid #E3DAC7; display:flex; justify-content:center; align-items:center; gap:0 24px; flex-wrap:wrap; padding:0 24px;">
+    <a href="Accueil.dc.html" style="font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; text-decoration:none; color:#1B2836; font-weight:600; padding:16px 2px 13px; border-bottom:2px solid transparent;" class="hl-gold">Accueil</a>
+    <a href="La Carte.dc.html" style="font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; text-decoration:none; color:#1B2836; font-weight:600; padding:16px 2px 13px; border-bottom:2px solid transparent;" class="hl-gold">La Carte</a>
+    <a href="Evenements.dc.html" style="font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; text-decoration:none; color:#1E4E86; font-weight:700; padding:16px 2px 13px; border-bottom:2px solid #1E4E86;">Fado &amp; Événements</a>
+    <a href="Receptions.dc.html" style="font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; text-decoration:none; color:#1B2836; font-weight:600; padding:16px 2px 13px; border-bottom:2px solid transparent;" class="hl-gold">Réceptions</a>
+    <a href="Galerie.dc.html" style="font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; text-decoration:none; color:#1B2836; font-weight:600; padding:16px 2px 13px; border-bottom:2px solid transparent;" class="hl-gold">Galerie</a>
+    <a href="Contact.dc.html" style="font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; text-decoration:none; color:#1B2836; font-weight:600; padding:16px 2px 13px; border-bottom:2px solid transparent;" class="hl-gold">Contact</a>
+    <a href="tel:+33169019158" style="font-size:12.5px; letter-spacing:.14em; text-decoration:none; color:#1E4E86; font-weight:700; padding:16px 2px 13px; border-bottom:2px solid transparent;" class="hl-gold">01 69 01 91 58</a>
+  </nav>
+
+  <div style="background:#14283E; text-align:center; padding:clamp(64px,8vw,100px) 28px;">
+    <div style="font-size:11.5px; letter-spacing:.28em; text-transform:uppercase; color:#E8C97A; font-weight:700;">Fado &amp; événements</div>
+    <h1 data-reveal style="font-family:'Cormorant Garamond',serif; font-size:clamp(40px,4.6vw,58px); font-weight:600; color:#F7F3EB; margin:18px auto 20px; line-height:1.08; max-width:18ch;">Des soirées à l'heure de Lisbonne</h1>
+    <p style="font-size:15.5px; line-height:1.75; color:#C9D8EC; margin:0 auto; max-width:58ch;">Guitare portugaise, viola et voix : régulièrement, le Comptoir accueille des artistes de fado pour des dîners-concerts qui font salle comble.</p>
+  </div>
+
+  <div style="max-width:1240px; margin:0 auto; padding:clamp(64px,8vw,100px) clamp(28px,5.5vw,72px); display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:clamp(44px,5vw,84px); align-items:center;">
+    <div>
+      <div style="font-size:11.5px; letter-spacing:.28em; text-transform:uppercase; color:#A9812E; font-weight:700;">Les soirées fado</div>
+      <h2 data-reveal style="font-family:'Cormorant Garamond',serif; font-size:clamp(32px,3.2vw,42px); font-weight:600; line-height:1.14; margin:16px 0 22px;">Dîner, puis laisser<br>chanter la saudade</h2>
+      <p style="font-size:16px; line-height:1.8; color:#414B59; margin:0 0 18px;">Le principe est simple : une grande tablée, les plats de la maison, et des musiciens au plus près des convives. Guitarra portuguesa, viola de fado, et des voix qui racontent Lisbonne et le pays.</p>
+      <p style="font-size:16px; line-height:1.8; color:#414B59; margin:0 0 32px;">Les dates sont annoncées au restaurant et sur notre page Facebook. Les places partent vite — mieux vaut réserver sa table.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="tel:+33169019158" style="display:inline-block; background:#1E4E86; color:#F7F3EB; padding:17px 32px; text-decoration:none; font-size:12.5px; letter-spacing:.15em; text-transform:uppercase; font-weight:700;" class="btn-blue">Réserver · 01 69 01 91 58</a>
+        <a href="https://www.facebook.com/jbjbjbcomptoirduportugal" target="_blank" rel="noopener" style="display:inline-block; background:transparent; color:#1B2836; border:1px solid #1B2836; padding:16px 30px; text-decoration:none; font-size:12.5px; letter-spacing:.15em; text-transform:uppercase; font-weight:700;" class="btn-dark">Les dates sur Facebook</a>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center;">
+      <figure data-reveal style="margin:0; max-width:420px; background:#FFFFFF; border:1px solid #E3DAC7; padding:16px 16px 18px; box-shadow:0 18px 40px rgba(27,40,54,.12); transform:rotate(-1.2deg);">
+        <img src="img/affiche-fado.jpg" alt="Affiche d'une soirée fado au Comptoir du Portugal" style="width:100%; display:block;">
+        <figcaption style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:16px; color:#6E7887; padding-top:14px; text-align:center;">L'affiche d'une de nos soirées fado — février 2025.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div style="background:#F0E9DB;">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(56px,7vw,84px) clamp(28px,5.5vw,72px); display:flex; align-items:center; justify-content:space-between; gap:36px; flex-wrap:wrap;">
+      <div style="max-width:680px;">
+        <div style="font-size:11.5px; letter-spacing:.28em; text-transform:uppercase; color:#A9812E; font-weight:700;">Et le reste de l'année</div>
+        <h2 data-reveal style="font-family:'Cormorant Garamond',serif; font-size:clamp(28px,2.8vw,38px); font-weight:600; margin:14px 0 14px; line-height:1.15;">La salle accueille aussi vos propres fêtes</h2>
+        <p style="font-size:15.5px; line-height:1.75; color:#414B59; margin:0;">Communions, baptêmes, anniversaires, repas d'association ou d'entreprise : la grande salle se dresse à la taille de votre événement.</p>
+      </div>
+      <a href="Receptions.dc.html" style="display:inline-block; background:transparent; color:#1B2836; border:1px solid #1B2836; padding:16px 30px; text-decoration:none; font-size:12.5px; letter-spacing:.15em; text-transform:uppercase; font-weight:700; flex:none;" class="btn-dark">Organiser une réception</a>
+    </div>
+  </div>
+
+  <div style="height:9px; background-image:linear-gradient(45deg,#2C5B8F 25%,transparent 25%,transparent 75%,#2C5B8F 75%),linear-gradient(45deg,#2C5B8F 25%,transparent 25%,transparent 75%,#2C5B8F 75%); background-position:0 0,7px 7px; background-size:14px 14px; background-color:#14283E;"></div>
+  <footer style="background:#14283E; color:#C8D4E4;">
+    <div style="max-width:1240px; margin:0 auto; padding:56px clamp(28px,5.5vw,72px) 48px; display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:44px;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:600; color:#F7F3EB; text-transform:uppercase; letter-spacing:.06em;">Comptoir du Portugal</div>
+        <p style="font-size:14px; line-height:1.75; color:#9FB0C6; margin:14px 0 0;">Cuisine portugaise traditionnelle, réceptions et soirées fado, sur la N20 à Ballainvilliers.</p>
+      </div>
+      <div>
+        <div style="font-size:11.5px; letter-spacing:.26em; text-transform:uppercase; color:#E8C97A; font-weight:700; margin-bottom:16px;">Horaires</div>
+        <div style="font-size:14px; line-height:2; color:#C8D4E4;">Mardi – jeudi · 12h–15h &amp; 19h–22h30<br>Vendredi – samedi · 12h–15h &amp; 19h–23h30<br>Dimanche · 12h–15h<br>Lundi · fermé</div>
+      </div>
+      <div>
+        <div style="font-size:11.5px; letter-spacing:.26em; text-transform:uppercase; color:#E8C97A; font-weight:700; margin-bottom:16px;">Contact</div>
+        <div style="font-size:14px; line-height:2; color:#C8D4E4;">2 av. de la Division Leclerc (N20)<br>91160 Ballainvilliers<br><a href="tel:+33169019158" style="color:#F7F3EB; font-weight:700; text-decoration:none;" class="fl-gold">01 69 01 91 58</a><br><a href="https://www.facebook.com/jbjbjbcomptoirduportugal" target="_blank" rel="noopener" style="color:#F7F3EB; text-decoration:underline;" class="fl-gold">Notre page Facebook</a></div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.14); text-align:center; padding:18px 24px; font-size:12px; color:#7E90A8;">© 2026 Comptoir du Portugal — Ballainvilliers</div>
+  </footer>
+
+</section>
+</x-dc>
+</body>
+</html>
